@@ -1,0 +1,23 @@
+import random
+
+print('Welcome to Password Generator')
+print('Note: More than 8 characters for password is stronger!')
+
+chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@£$%^&*().,?0123456789'
+
+fullname = input('What is your name?: ')
+birtdate = input('Your birthdate?: ')
+age = input('Your Age?: ')
+number = input('How many passwords do you want to generate?: ')
+number = int(number)
+
+length = input('Enter length of password: ')
+length = int(length)
+
+print('\nhere are your passwords:')
+
+for pwd in range(number):
+  password = ''
+  for c in range(length):
+    password += random.choice(chars)
+  print(password)
